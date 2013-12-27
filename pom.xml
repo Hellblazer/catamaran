@@ -9,6 +9,10 @@
 	<description>Replicated State Machines Using Raft</description>
 	<url>https://github.com/Hellblazer/catamaran</url>
 
+	<modules>
+		<module>catamaran</module>
+	</modules>
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
@@ -24,9 +28,33 @@
 	<scm>
 		<url>https://github.com/Hellblazer/catamaran.git</url>
 	</scm>
-	<modules>
-		<module>catamaran</module>
-	</modules>
+
+	<repositories>
+		<repository>
+			<id>hellblazer-snapshots</id>
+			<name>Hellblazer Snapshots </name>
+			<url>http://repository-hal900000.forge.cloudbees.com/snapshot/</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.hellblazer</groupId>
+				<artifactId>tron</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.hellblazer</groupId>
+				<artifactId>pinkie</artifactId>
+				<version>0.0.3-SNAPSHOT</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
 	<build>
 		<plugins>
 			<plugin>

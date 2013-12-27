@@ -9,4 +9,14 @@
 	<artifactId>catamaran</artifactId>
 	<name>Catamaran Framework</name>
 	<description>Replicated state machine framework using Raft</description>
+	<dependencies>
+		<dependency>
+			<groupId>com.hellblazer</groupId>
+			<artifactId>tron</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.hellblazer</groupId>
+			<artifactId>pinkie</artifactId>
+		</dependency>
+	</dependencies>
 </project>
